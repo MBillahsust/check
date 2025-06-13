@@ -56,7 +56,7 @@ export default function Header() {
 
   
   return (
-    <Disclosure as="nav" className="bg-[#09090b] text-white">
+    <Disclosure as="nav" className="bg-[var(--header-background-color)] text-[var(--header-text-color)]">
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-16 items-center justify-between">
           {/* Mobile menu button */}
@@ -82,7 +82,7 @@ export default function Header() {
                     key={item.name}
                     to={item.href}
                     className={classNames(
-                      'text-xs font-medium rounded-md px-2 py-2 hover:bg-[#6d8ded] transition-colors',
+                      'text-xs font-medium rounded-md px-2 py-2 hover:bg-[var(--header-background-color)] transition-colors',
                     )}
                   >
                     {item.name}
@@ -98,7 +98,7 @@ export default function Header() {
           <button
             type="button"
             onClick={toggleTheme}
-            className="relative rounded-full bg-[#1a1a1a] p-1 text-gray-400 hover:text-white focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#09090b] mr-3">
+            className="relative rounded-full bg-[var(--header-background-color)] p-1 text-gray-400 hover:text-white focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#09090b] mr-3">
             <span className="sr-only">Toggle theme</span>
             {theme === 'dark' ? (
               <FaSun className="h-6 w-6" />
@@ -110,7 +110,7 @@ export default function Header() {
           {/* Notification Icon */}
           <button
             type="button"
-            className="relative rounded-full bg-[#1a1a1a] p-1 text-gray-400 hover:text-white focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#09090b]">
+            className="relative rounded-full bg-[var(--header-background-color)] p-1 text-gray-400 hover:text-white focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#09090b]">
             <span className="absolute -inset-1.5" />
             <span className="sr-only">View notifications</span>
             <BellIcon aria-hidden="true" className="h-6 w-6" />
@@ -119,7 +119,7 @@ export default function Header() {
             {/* Profile dropdown */}
             <Menu as="div" className="relative ml-3">
               <div>
-                <MenuButton className="flex rounded-full bg-[#1a1a1a] text-sm focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#09090b]">
+                <MenuButton className="flex rounded-full bg-[var(--header-background-color)] text-sm focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#09090b]">
                   <span className="sr-only">Open user menu</span>
                   {userInfo ? (
                     <FaUserCircle className="h-8 w-8 rounded-full text-white" />
@@ -128,7 +128,7 @@ export default function Header() {
                   )}
                 </MenuButton>
               </div>
-              <MenuItems className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-[#1a1a1a] shadow-lg py-1 ring-1 ring-black/5">
+              <MenuItems className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-[var(--header-background-color)] shadow-lg py-1 ring-1 ring-black/5">
                 {userInfo ? (
                   <>
                     <MenuItem>

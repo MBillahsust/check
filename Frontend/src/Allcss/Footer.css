@@ -1,6 +1,6 @@
 .footer {
-  background-color: rgb(230, 230, 230);
-  color: rgb(60, 60, 60);
+  background-color: var(--footer-background-color);
+  color: var(--footer-text-color);
   padding: 2rem;
   border-top: 1px solid #ddd;
   width: 100%;
@@ -22,7 +22,7 @@
 .footer-brand {
   font-size: 1.25rem;
   font-weight: 600;
-  color: rgb(60, 60, 60);
+  color: var(--footer-text-color);
 }
 
 .footer-nav {
@@ -35,18 +35,18 @@
 
 .footer-link {
   text-decoration: none;
-  color: rgb(60, 60, 60);
+  color: var(--footer-link-color);
   font-size: 1rem;
   transition: color 0.2s ease;
 }
 
 .footer-link:hover {
-  color: rgb(0, 0, 0);
+  color: var(--footer-text-color);
 }
 
 .footer-copyright {
   font-size: 0.875rem;
-  color: rgb(60, 60, 60);
+  color: var(--footer-text-color);
   display: flex;
   justify-content: center;
   align-items: center;

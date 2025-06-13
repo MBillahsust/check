@@ -9,6 +9,8 @@
     --footer-background-color: #b1b9c2;
     --footer-text-color: #333;
     --footer-link-color: #333;
+    --header-background-color: #f5f5f5;
+    --header-text-color: #333;
   }
 
   [data-theme='dark'] {
@@ -17,6 +19,8 @@
     --footer-background-color: #1f1f1f;
     --footer-text-color: #f5f5f5;
     --footer-link-color: #f5f5f5;
+    --header-background-color: #1a1a1a;
+    --header-text-color: #ffffff;
   }
 
   body {

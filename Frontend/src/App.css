@@ -6,15 +6,16 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
-  color: #222;
-  background-color: white;
+  color: var(--text-color);
+  background-color: var(--background-color);
 }
 
 .app-container {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: white;
+  background-color: var(--background-color);
+  color: var(--text-color);
   position: relative;
 }
 
@@ -28,7 +29,8 @@ html, body {
   display: flex;
   flex-direction: column;
   flex: 1 0 auto;
-  background-color: white;
+  background-color: var(--background-color);
+  color: var(--text-color);
   margin-top: 72px;
   min-height: calc(100vh - 72px);
   position: relative;
@@ -59,8 +61,8 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgb(9, 9, 11);
-  color: white;
+  background-color: var(--header-background-color);
+  color: var(--header-text-color);
   padding: 0px 50px;
 }
 
@@ -166,8 +168,8 @@ form h1 {
 }
 
 footer {
-  background-color: rgb(230, 230, 230);
-  color: rgb(60, 60, 60);
+  background-color: var(--footer-background-color);
+  color: var(--footer-text-color);
   padding: 24px 40px;
   width: 100%;
   margin-top: auto;
@@ -190,13 +192,13 @@ footer nav {
 }
 
 footer nav a {
-  color: rgb(60, 60, 60);
+  color: var(--footer-link-color);
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 footer nav a:hover {
-  color: rgb(0, 0, 0);
+  color: var(--footer-text-color);
 }
 
 footer p {
