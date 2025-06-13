@@ -1,8 +1,7 @@
 import React, { useState, useRef, useEffect, useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { FaUser, FaUserCircle, FaSun, FaMoon } from 'react-icons/fa';
+import { FaUser, FaUserCircle } from 'react-icons/fa';
 import { UserContext } from '../../UserContext';
-import { ThemeContext } from '../../ThemeContext';
 import { Disclosure, Menu, MenuButton, MenuItem, MenuItems, DisclosureButton, DisclosurePanel } from '@headlessui/react';
 import { toast } from 'react-toastify';
 
@@ -31,7 +30,6 @@ function classNames(...classes) {
 export default function Header() {
   const navigate = useNavigate();
   const { userInfo, setUserInfo } = useContext(UserContext);
-  const { theme, toggleTheme } = useContext(ThemeContext);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const dropdownRef = useRef(null);
@@ -94,27 +92,14 @@ export default function Header() {
 
           {/* Right-side icons */}
           <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-          {/* Theme toggle */}
-          <button
-            type="button"
-            onClick={toggleTheme}
-            className="relative rounded-full bg-[#1a1a1a] p-1 text-gray-400 hover:text-white focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#09090b] mr-3">
-            <span className="sr-only">Toggle theme</span>
-            {theme === 'dark' ? (
-              <FaSun className="h-6 w-6" />
-            ) : (
-              <FaMoon className="h-6 w-6" />
-            )}
-          </button>
-
-          {/* Notification Icon */}
-          <button
-            type="button"
-            className="relative rounded-full bg-[#1a1a1a] p-1 text-gray-400 hover:text-white focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#09090b]">
-            <span className="absolute -inset-1.5" />
-            <span className="sr-only">View notifications</span>
-            <BellIcon aria-hidden="true" className="h-6 w-6" />
-          </button>
+            {/* Notification Icon */}
+            <button
+              type="button"
+              className="relative rounded-full bg-[#1a1a1a] p-1 text-gray-400 hover:text-white focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#09090b]">
+              <span className="absolute -inset-1.5" />
+              <span className="sr-only">View notifications</span>
+              <BellIcon aria-hidden="true" className="h-6 w-6" />
+            </button>
 
             {/* Profile dropdown */}
             <Menu as="div" className="relative ml-3">
